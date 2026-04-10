@@ -1,4 +1,4 @@
-# Turn Idle GPUs Into Throughput: an AI Infra Bottleneck Detective for training performance optimization
+# Pulse: An AI Infra Bottleneck Detective for training performance optimization
 
 This project is a CrewAI-based observability assistant built to answer questions like:
 
