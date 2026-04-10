@@ -1,0 +1,26 @@
+[project]
+name = "gpu-bottleneck-detective"
+version = "0.1.0"
+description = "CrewAI project for diagnosing GPU training bottlenecks across infra layers"
+authors = [{ name = "Gaurav Cherwal", email = "gauravcherwal@outlook.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[litellm,tools]==1.14.1",
+]
+
+[project.scripts]
+observability = "observability.main:run"
+run_crew = "observability.main:run"
+train = "observability.main:train"
+replay = "observability.main:replay"
+test = "observability.main:test"
+run_with_trigger = "observability.main:run_with_trigger"
+diagnose_metrics = "observability.harness:main"
+run_diagnosis_suite = "observability.suite_runner:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

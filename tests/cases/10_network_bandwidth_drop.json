@@ -1,0 +1,12 @@
+{
+  "question": "Why did throughput fall on remote data reads?",
+  "expected_top": "network_bottleneck",
+  "metrics": {
+    "window": "last_15m vs baseline",
+    "gpu": {"utilization_pct_current": 50, "utilization_pct_baseline": 81, "memory_usage_pct_current": 61, "memory_usage_pct_baseline": 70, "power_w_current": 238, "power_w_baseline": 318, "temperature_c_current": 62, "temperature_c_baseline": 71},
+    "data_pipeline": {"data_loader_latency_ms_current": 101, "data_loader_latency_ms_baseline": 59, "batch_prep_time_ms_current": 58, "batch_prep_time_ms_baseline": 39, "queue_depth_current": 4, "queue_depth_baseline": 7, "dataset_read_throughput_mb_s_current": 760, "dataset_read_throughput_mb_s_baseline": 910},
+    "network": {"rdma_latency_us_current": 40, "rdma_latency_us_baseline": 23, "packet_drops_current": 3, "packet_drops_baseline": 1, "retries_current": 5, "retries_baseline": 1, "bandwidth_gbps_current": 60, "bandwidth_gbps_baseline": 100},
+    "storage": {"read_throughput_mb_s_current": 945, "read_throughput_mb_s_baseline": 985, "iops_current": 14200, "iops_baseline": 14550, "file_open_latency_ms_current": 8, "file_open_latency_ms_baseline": 7, "cache_hit_rate_pct_current": 92, "cache_hit_rate_pct_baseline": 93},
+    "training": {"step_time_ms_current": 1340, "step_time_ms_baseline": 995, "tokens_per_sec_current": 9900, "tokens_per_sec_baseline": 13700, "batch_completion_time_ms_current": 1410, "batch_completion_time_ms_baseline": 1060, "failure_rate_pct_current": 0.35, "failure_rate_pct_baseline": 0.2}
+  }
+}

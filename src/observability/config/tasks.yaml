@@ -1,0 +1,23 @@
+diagnose_training_bottleneck:
+  description: >
+    Investigate the training performance question: "{question}".
+
+    Use this compact deterministic diagnosis as the source of truth:
+    {diagnosis_payload}
+
+    Your job is to:
+    1. Treat the provided diagnosis as final.
+    2. Restate the top bottleneck in plain operator language.
+    3. Use only the supplied evidence lines and root cause chain.
+    4. Do not recompute, reinterpret, or override the diagnosis.
+    5. Keep the answer short and concrete.
+  expected_output: >
+    A concise markdown incident note with these sections:
+    - Answer: one sentence directly answering the question
+    - Top bottleneck: the highest-ranked deterministic diagnosis and score
+    - Evidence: 3 to 6 bullets with metric deltas vs baseline and anomaly severity
+    - Root cause: one short causal chain using arrows like A -> B -> C
+    - Confidence: High, Medium, or Low
+  agent: bottleneck_detective
+  markdown: true
+  output_file: report.md

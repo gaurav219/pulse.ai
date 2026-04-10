@@ -1,0 +1,12 @@
+{
+  "question": "Why is the app layer failing more often?",
+  "expected_top": "training_instability",
+  "metrics": {
+    "window": "last_15m vs baseline",
+    "gpu": {"utilization_pct_current": 77, "utilization_pct_baseline": 79, "memory_usage_pct_current": 71, "memory_usage_pct_baseline": 70, "power_w_current": 305, "power_w_baseline": 308, "temperature_c_current": 71, "temperature_c_baseline": 70},
+    "data_pipeline": {"data_loader_latency_ms_current": 61, "data_loader_latency_ms_baseline": 60, "batch_prep_time_ms_current": 41, "batch_prep_time_ms_baseline": 40, "queue_depth_current": 7, "queue_depth_baseline": 7, "dataset_read_throughput_mb_s_current": 902, "dataset_read_throughput_mb_s_baseline": 905},
+    "network": {"rdma_latency_us_current": 23, "rdma_latency_us_baseline": 22, "packet_drops_current": 1, "packet_drops_baseline": 1, "retries_current": 1, "retries_baseline": 1, "bandwidth_gbps_current": 99, "bandwidth_gbps_baseline": 100},
+    "storage": {"read_throughput_mb_s_current": 973, "read_throughput_mb_s_baseline": 980, "iops_current": 14400, "iops_baseline": 14500, "file_open_latency_ms_current": 7, "file_open_latency_ms_baseline": 7, "cache_hit_rate_pct_current": 93, "cache_hit_rate_pct_baseline": 93},
+    "training": {"step_time_ms_current": 1580, "step_time_ms_baseline": 990, "tokens_per_sec_current": 8600, "tokens_per_sec_baseline": 13900, "batch_completion_time_ms_current": 1660, "batch_completion_time_ms_baseline": 1050, "failure_rate_pct_current": 2.2, "failure_rate_pct_baseline": 0.2}
+  }
+}

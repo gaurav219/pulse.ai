@@ -1,0 +1,12 @@
+{
+  "question": "Why are GPUs underfed?",
+  "expected_top": "data_pipeline_bottleneck",
+  "metrics": {
+    "window": "last_15m vs baseline",
+    "gpu": {"utilization_pct_current": 46, "utilization_pct_baseline": 83, "memory_usage_pct_current": 60, "memory_usage_pct_baseline": 69, "power_w_current": 225, "power_w_baseline": 320, "temperature_c_current": 61, "temperature_c_baseline": 71},
+    "data_pipeline": {"data_loader_latency_ms_current": 125, "data_loader_latency_ms_baseline": 58, "batch_prep_time_ms_current": 78, "batch_prep_time_ms_baseline": 37, "queue_depth_current": 2, "queue_depth_baseline": 8, "dataset_read_throughput_mb_s_current": 760, "dataset_read_throughput_mb_s_baseline": 900},
+    "network": {"rdma_latency_us_current": 23, "rdma_latency_us_baseline": 22, "packet_drops_current": 0, "packet_drops_baseline": 0, "retries_current": 1, "retries_baseline": 1, "bandwidth_gbps_current": 99, "bandwidth_gbps_baseline": 100},
+    "storage": {"read_throughput_mb_s_current": 940, "read_throughput_mb_s_baseline": 980, "iops_current": 14100, "iops_baseline": 14500, "file_open_latency_ms_current": 8, "file_open_latency_ms_baseline": 7, "cache_hit_rate_pct_current": 92, "cache_hit_rate_pct_baseline": 93},
+    "training": {"step_time_ms_current": 1260, "step_time_ms_baseline": 980, "tokens_per_sec_current": 10800, "tokens_per_sec_baseline": 13800, "batch_completion_time_ms_current": 1320, "batch_completion_time_ms_baseline": 1040, "failure_rate_pct_current": 0.3, "failure_rate_pct_baseline": 0.2}
+  }
+}
